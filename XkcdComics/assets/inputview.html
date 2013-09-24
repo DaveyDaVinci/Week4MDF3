@@ -47,7 +47,7 @@
 
 	<div id="div_1">
 		<div id="form_div">
-			<form id="input_form">
+			<form id="input_form" name="frml" action="submit.htm" onsubmit="grabTextFromForm();">
 			Comic Number:<input type="number" name="comicnumber">
 			</form>
 		</div>
@@ -62,7 +62,7 @@
 	<script type="text/javascript">
 		function grabTextFromForm()
 		{
-			var text = document.getElementsByName('comicnumber').value;
+			var text = document.forms['frml']['comicnumber'].value;
 			MainHTMLView.setHTML(text);
 			
 		}
